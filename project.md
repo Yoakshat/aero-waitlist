@@ -30,7 +30,15 @@ Light gray (#f0f0f2-ish) soft background throughout, dark gray/near-black text, 
 - `waitlist.db` — SQLite file created on first run (gitignored)
 
 ## Key Files
-(filled in as we build)
+- `server.js` — Express server + SQLite storage + API (signup, CSV export)
+- `public/index.html` — the whole page (header, hero, features, waitlist form, footer)
+- `public/styles.css` — all styling; responsive breakpoints at 920px (hero/features stack) and 480px (form stacks)
+- `public/app.js` — form submit → POST /api/waitlist, shows inline success/error
+- `design-mockup.png` — the reference design
 
 ## How to Run
-(filled in as we build)
+```bash
+npm install
+node server.js   # http://localhost:3000
+```
+Export the mailing list: http://localhost:3000/api/waitlist.csv
