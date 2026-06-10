@@ -11,8 +11,8 @@
 html, body { overflow-x: hidden; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
-    'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, sans-serif;
   color: var(--ink);
   background:
     radial-gradient(120% 90% at 50% 0%, #f6f6f8 0%, #ececef 55%, #e4e4e8 100%);
@@ -69,9 +69,10 @@ main {
 }
 
 .hero-text h1 {
+  font-family: 'Inter Tight', 'Inter', -apple-system, sans-serif;
   font-size: clamp(1.8rem, 4.4vh, 2.75rem);
-  font-weight: 650;
-  letter-spacing: -0.022em;
+  font-weight: 630;
+  letter-spacing: -0.005em;
   margin-bottom: 1.6vh;
 }
 
