@@ -2,7 +2,7 @@ const express = require('express');
 const Database = require('better-sqlite3');
 const path = require('path');
 
-const db = new Database(path.join(__dirname, 'waitlist.db'));
+const db = new Database(process.env.DB_PATH || path.join(__dirname, 'waitlist.db'));
 db.exec(`CREATE TABLE IF NOT EXISTS signups (
   email TEXT PRIMARY KEY,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
