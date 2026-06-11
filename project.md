@@ -4,11 +4,10 @@
 A single-page waitlist landing site for AERO, a flight-finding app ("Tell us when you're free. We'll find the best trip."). Visitors read about the product and join the waitlist by entering their email. Signups are stored server-side so the owner has a mailing list they can export.
 
 ## Design
-The page must match `design-mockup.png` (repo root). Image assets live in `public/assets/`:
+The page is based on `design-mockup.png` (repo root) with owner-requested tweaks: no Seattle skyline, no "Early Access" label, chat copy/feature bullets emphasize loose intent over exact details. Image assets live in `public/assets/`:
 - `globe.png` — translucent glass globe behind the phone
 - `phoneapp2.png` — tilted iPhone showing the AERO app (Seattle → Tokyo trip results)
-- `seattle.png` — light hand-sketched Seattle skyline, right side of hero
-- `plane.png` — white airplane (subtle decorative use)
+- `plane.png` — white airplane, animated along the orbit flight path (SMIL animateMotion)
 
 Page structure (top to bottom):
 1. Header: "AERO" wordmark centered, small compass illustration top right

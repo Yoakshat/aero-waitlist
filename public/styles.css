@@ -181,13 +181,6 @@ main {
   display: none;
 }
 
-.skyline {
-  height: 30%;
-  right: -7%;
-  bottom: 14%;
-  opacity: 0.9;
-}
-
 /* ---------- Features ---------- */
 .features {
   display: grid;
@@ -308,11 +301,6 @@ main {
   color: var(--ink-soft);
 }
 
-.footer .divider {
-  margin: 0 10px;
-  color: #c3c5cc;
-}
-
 /* ---------- Motion ---------- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }
@@ -398,7 +386,6 @@ main {
   .phone { height: 96%; top: 0; }
   .globe { height: 46%; top: 2%; }
   .plane { top: 58%; }
-  .skyline { right: -2%; bottom: 10%; }
   .orbit { left: -2%; top: 8%; }
 
   .features {
