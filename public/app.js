@@ -1,3 +1,29 @@
+// Type out the chat card messages one by one on load
+(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const lines = [...document.querySelectorAll('.chat-lines p')];
+  const cursor = document.querySelector('.cursor');
+  const texts = lines.map((l) => {
+    const t = l.childNodes[0] ? l.childNodes[0].textContent : '';
+    l.childNodes[0] && l.childNodes[0].remove();
+    return t;
+  });
+
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  (async () => {
+    await sleep(900);
+    for (let i = 0; i < lines.length; i++) {
+      lines[i].prepend('');
+      lines[i].insertBefore(cursor, lines[i].firstChild);
+      for (const ch of texts[i]) {
+        cursor.before(ch);
+        await sleep(38);
+      }
+      if (i < lines.length - 1) await sleep(420);
+    }
+  })();
+})();
+
 const form = document.getElementById('waitlist-form');
 const emailInput = document.getElementById('email');
 const message = document.getElementById('form-message');

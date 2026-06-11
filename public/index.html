@@ -16,8 +16,10 @@
     <svg class="compass" viewBox="0 0 64 64" fill="none" stroke="#b9bcc4" stroke-width="1.5" aria-hidden="true">
       <circle cx="32" cy="32" r="20"/>
       <circle cx="32" cy="32" r="2" fill="#b9bcc4"/>
-      <path d="M32 14 L36 30 L32 32 L28 30 Z" fill="#c9ccd4" stroke="none"/>
-      <path d="M32 50 L28 34 L32 32 L36 34 Z" fill="#e3e5ea" stroke="none"/>
+      <g class="needle">
+        <path d="M32 14 L36 30 L32 32 L28 30 Z" fill="#c9ccd4" stroke="none"/>
+        <path d="M32 50 L28 34 L32 32 L36 34 Z" fill="#e3e5ea" stroke="none"/>
+      </g>
       <text x="32" y="9" text-anchor="middle" font-size="8" fill="#b9bcc4" stroke="none" font-family="Inter, sans-serif">N</text>
       <text x="32" y="62" text-anchor="middle" font-size="8" fill="#b9bcc4" stroke="none" font-family="Inter, sans-serif">S</text>
     </svg>
@@ -48,6 +50,14 @@
       <div class="hero-art" aria-hidden="true">
         <svg class="orbit" viewBox="0 0 600 560" fill="none" preserveAspectRatio="xMidYMid meet">
           <ellipse cx="300" cy="280" rx="285" ry="150" stroke="#c9ccd4" stroke-width="1.2" transform="rotate(-16 300 280)"/>
+          <path id="flightpath" d="M 46.1 393.2 A 285 150 -16 0 0 575.4 241.4" fill="none" stroke="none"/>
+          <g class="plane-flyer" opacity="0">
+            <image href="assets/plane.png" x="-62" y="-31" width="124" height="62"/>
+            <animateMotion dur="16s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#flightpath"/>
+            </animateMotion>
+            <animate attributeName="opacity" values="0;1;1;1;0;0" keyTimes="0;0.07;0.5;0.78;0.92;1" dur="16s" repeatCount="indefinite"/>
+          </g>
         </svg>
         <img class="globe" src="assets/globe.png" alt="">
         <img class="plane" src="assets/plane.png" alt="">
