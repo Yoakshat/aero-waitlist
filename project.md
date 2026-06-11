@@ -41,3 +41,12 @@ npm install
 node server.js   # http://localhost:3000
 ```
 Export the mailing list: http://localhost:3000/api/waitlist.csv
+
+## Deployment
+Live at **https://aeroapp.up.railway.app** (Railway project `aero-waitlist`, service `web`, id 70bca466-68c0-4ea0-b4bf-80bd2a654f48). The SQLite file lives on a persistent volume mounted at `/data` (`DB_PATH=/data/waitlist.db`), so signups survive redeploys.
+
+There is no GitHub auto-deploy — pushing to GitHub does NOT deploy. To ship changes:
+```bash
+cd ~/projects/aero-waitlist/main && railway up --detach
+```
+Export the live mailing list: https://aeroapp.up.railway.app/api/waitlist.csv
