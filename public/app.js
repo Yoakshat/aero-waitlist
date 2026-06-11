@@ -24,6 +24,13 @@
   })();
 })();
 
+// Mobile "Join the Waitlist" button: scroll to the form, then focus the email field
+document.querySelector('.cta-jump').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('waitlist-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  setTimeout(() => document.getElementById('email').focus({ preventScroll: true }), 600);
+});
+
 const form = document.getElementById('waitlist-form');
 const emailInput = document.getElementById('email');
 const message = document.getElementById('form-message');

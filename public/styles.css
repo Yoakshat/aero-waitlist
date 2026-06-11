@@ -135,6 +135,22 @@ main {
 
 .sparkle { margin-right: 4px; }
 
+/* mobile-only shortcut to the waitlist form; desktop already shows the form on screen */
+.cta-jump {
+  display: none;
+  margin-top: 22px;
+  background: #1c1d21;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 13px 28px;
+  box-shadow: 0 12px 30px -12px rgba(30, 32, 40, 0.4);
+}
+
+.cta-jump:active { transform: scale(0.98); }
+
 /* ---------- Hero art ---------- */
 .hero-art {
   position: relative;
@@ -370,6 +386,7 @@ main {
   }
 
   .hero-text { display: flex; flex-direction: column; align-items: center; }
+  .cta-jump { display: inline-block; animation: fadeUp 0.6s ease-out 0.5s both; }
   .chat-card { text-align: left; width: 100%; padding: 16px 64px 16px 22px; }
   .chat-lines p { font-size: 0.95rem; }
   .subhead { margin-bottom: 26px; }
